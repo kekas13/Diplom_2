@@ -1,9 +1,11 @@
 import requests
+import allure
 
 from constants import BASE_URL, REGISTER_USER
 from helpers import generate_random_string, fake
 
 
+@allure.step('Регистрация нового пользователя и возврат учетных данных для входа')
 def register_new_user_and_return_login_password():
     login_pass = []
 
